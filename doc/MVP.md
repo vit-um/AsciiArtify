@@ -7,7 +7,8 @@
 1. Перевіряємо роботу застосунку AsciiArtify
 - Переадресуємо порти наступною командою:
 ```bash
-$ k port-forward -n demo svc/ambassador 8081:80&
+$ 
+
 Forwarding from 127.0.0.1:8081 -> 80
 Forwarding from [::1]:8081 -> 80
 ```
@@ -36,7 +37,7 @@ ambassador         LoadBalancer   10.43.190.212   <pending>     80:30092/TCP    
 ```bash
 ✗ k get svc -n demo
 NAME               TYPE           CLUSTER-IP      EXTERNAL-IP   PORT(S)         AGE
-ambassador         NodePort       10.43.190.212   <pending>     80:30092/TCP    84s
+ambassador         NodePort       10.43.190.212   <none>        80:30092/TCP    84s
 ```
 
 3. Перевіримо роботу застосунка після виправлення помилки
@@ -49,4 +50,8 @@ curl -F 'image=@g.png' localhost:8081/img/
 ![Result](.img/argo_res.png)  
 
 4. Зафіксуємо весь описаний процес в наглядному форматі на відео:
+
+[![MPV Demo](.img/argo_mvp.png)](https://www.youtube.com/watch?v=uGHwzDpGGE0)
+
+
 
