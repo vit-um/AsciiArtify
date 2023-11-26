@@ -7,8 +7,7 @@
 1. Перевіряємо роботу застосунку AsciiArtify
 - Переадресуємо порти наступною командою:
 ```bash
-$ 
-
+$ k port-forward -n demo svc/ambassador 8081:80&
 Forwarding from 127.0.0.1:8081 -> 80
 Forwarding from [::1]:8081 -> 80
 ```
